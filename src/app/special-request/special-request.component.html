@@ -1,14 +1,17 @@
 <mat-card>
+  <mat-card-title>Special Request</mat-card-title>
+  <mat-card-content>
+    <mat-card-label>Special requests may be subject to an additional charge</mat-card-label>
+    <input [(ngModel)]="foo" type="text" placeholder="Enter special request" matInput />
 
-<h3>Special Request</h3>
-<div>
+    <button
+        mat-button
+        color="warn"
+        (click)='getspecialRequest()'
+    >
+        Add to Cart
+    </button>
 
-<label>Special requests may be subject to an additional charge</label>
-<br>
-<input [(ngModel)]="foo"  type="text">
-
-<button mat-button color="warn"
-(click)='getspecialRequest()'>Add to Cart</button>
-<h3>{{foo}}</h3>
-</div>
+    <h3>{{foo}}</h3>
+  </mat-card-content>
 </mat-card>
